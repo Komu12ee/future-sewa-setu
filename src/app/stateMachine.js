@@ -41,12 +41,18 @@ export class StateMachine {
 
   start() {
     this.transitionTo(STATES.ATTRACT);
-    this.idleTimer.start();
+    this.idleTimer.stop();
   }
 
   async transitionTo(state, payload = null) {
     this.currentState = state;
     voiceAdapter.stopAll();
+
+    if (state === STATES.ATTRACT || state === STATES.RESET) {
+      this.idleTimer.stop();
+    } else {
+      this.idleTimer.start();
+    }
 
     if (this.devPanel) this.devPanel.update();
 
@@ -223,11 +229,18 @@ export class StateMachine {
 
   handleIdleTimeout() {
     console.log('Idle timeout triggered - resetting kiosk to attract screen');
+    if (this.formRunner) {
+      this.formRunner.stopCurrentRun();
+    }
     this.transitionTo(STATES.RESET);
   }
 
   resetSession() {
     if (this.timerInterval) clearInterval(this.timerInterval);
+    if (this.formRunner) {
+      this.formRunner.stopCurrentRun();
+    }
+    this.idleTimer.stop();
     voiceAdapter.stopAll();
     voiceHud.hide();
     session.reset();

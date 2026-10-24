@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Initialize Dev Panel (?dev=1)
   const devPanel = new DevPanel(stateMachine);
   stateMachine.setDevPanel(devPanel);
+  window.kioskStateMachine = stateMachine;
+  window.kioskDevPanel = devPanel;
 
   // Start at Attract screen
   stateMachine.start();

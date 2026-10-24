@@ -83,11 +83,25 @@ export class FormRunner {
   }
 
   async loadTemplate(filename) {
+    let target = document.querySelector('#formContentArea');
+    if (!target && window.kioskStateMachine) {
+      window.kioskStateMachine.ensureFormShell();
+      target = document.querySelector('#formContentArea');
+    }
+    if (target) {
+      this.container = target;
+    }
     const serviceDir = session.currentService || 'income-certificate';
     const res = await fetch(`./services/${serviceDir}/${filename}`);
     if (!res.ok) throw new Error(`Template ${filename} not found`);
     const html = await res.text();
     this.container.innerHTML = html;
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    if (window.kioskDevPanel) {
+      window.kioskDevPanel.update();
+    }
   }
 
   // ==========================================
@@ -129,18 +143,31 @@ export class FormRunner {
       if (distEl) distEl.value = session.profile.district;
     }
 
+    // Bind manual next / reset buttons
+    const nextBtn = document.querySelector('#btnStep1Next');
+    let userSkipped = false;
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        userSkipped = true;
+        voiceAdapter.stopListening();
+      });
+    }
+
     // Spoken intro
     await voiceAdapter.speak('पहले आपकी बुनियादी जानकारी भरते हैं।');
 
     // Run fields
     const pageConfig = this.serviceConfig.pages[0];
     for (const field of pageConfig.fields) {
+      if (userSkipped) break;
       if (field.auto) continue;
       await fieldAsker.askField(field);
     }
 
     // Ask "क्या हम अगले पेज पर चलें?"
-    await this.askNextPageConfirmation('step1');
+    if (!userSkipped) {
+      await this.askNextPageConfirmation('step1');
+    }
   }
 
   // ==========================================
@@ -161,18 +188,31 @@ export class FormRunner {
       distEl.value = session.profile.district || 'बालोद';
     }
 
+    // Bind manual next button
+    const nextBtn = document.querySelector('#btnStep2Next');
+    let userSkipped = false;
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        userSkipped = true;
+        voiceAdapter.stopListening();
+      });
+    }
+
     // Spoken intro
     await voiceAdapter.speak('अब हितग्राही और आय की जानकारी भरते हैं।');
 
     // Run fields
     const pageConfig = this.serviceConfig.pages[1];
     for (const field of pageConfig.fields) {
+      if (userSkipped) break;
       if (field.auto) continue;
       await fieldAsker.askField(field);
     }
 
     // Ask "क्या हम अगले पेज पर चलें?"
-    await this.askNextPageConfirmation('step2');
+    if (!userSkipped) {
+      await this.askNextPageConfirmation('step2');
+    }
   }
 
   // ==========================================
