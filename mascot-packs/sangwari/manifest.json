@@ -1,0 +1,17 @@
+{
+  "id": "sangwari",
+  "name": "Sangwari (संगवारी)",
+  "type": "image",
+  "states": {
+    "idle": "./mascot-packs/sangwari/mascot.svg",
+    "speaking": "./mascot-packs/sangwari/mascot.svg",
+    "listening": "./mascot-packs/sangwari/mascot.svg",
+    "thinking": "./mascot-packs/sangwari/mascot.svg",
+    "happy": "./mascot-packs/sangwari/mascot.svg"
+  },
+  "image": "./mascot-packs/sangwari/mascot.svg",
+  "thumbnail": "./mascot-packs/sangwari/mascot.svg",
+  "background": "transparent",
+  "scale": 1.0,
+  "voice": { "lang": "hi-IN", "speaker": "aditya", "pace": 1.05 }
+}

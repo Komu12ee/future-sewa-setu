@@ -1,0 +1,321 @@
+{
+  "id": "income-certificate",
+  "title": {
+    "hi": "आय प्रमाण पत्र",
+    "en": "Income Certificate"
+  },
+  "formHeader": {
+    "hi": "आवेदन पत्र : आय प्रमाण पत्र",
+    "en": "Application Form: Income Certificate"
+  },
+  "pages": [
+    {
+      "id": "page-1-beneficiary",
+      "step": 1,
+      "pageType": "form",
+      "title": {
+        "hi": "हितग्राही की जानकारी",
+        "en": "Beneficiary Information"
+      },
+      "mascotIntro": {
+        "hi": "नमस्ते! सबसे पहले हितग्राही की जानकारी भरते हैं। मैं एक-एक करके पूछूँगा।",
+        "en": "Hello! Let's start with the beneficiary's details. I'll ask one thing at a time."
+      },
+      "mascotOutro": {
+        "hi": "बहुत बढ़िया, पहला पेज पूरा हुआ। अब पता की जानकारी भरते हैं।",
+        "en": "Great, page one is done. Now the address details."
+      },
+      "fields": [
+        {
+          "id": "beneficiaryType",
+          "domId": "TODO_beneficiaryType",
+          "type": "select",
+          "optionsFrom": "dom",
+          "label": { "hi": "हितग्राही का प्रकार", "en": "Beneficiary Type" },
+          "ask": {
+            "hi": "हितग्राही का प्रकार क्या है? विकल्प हैं: {options}",
+            "en": "What is the beneficiary type? The options are: {options}"
+          },
+          "required": true,
+          "parser": "option"
+        },
+        {
+          "id": "beneficiaryAge",
+          "domId": "TODO_beneficiaryAge",
+          "type": "number",
+          "label": { "hi": "हितग्राही की उम्र", "en": "Beneficiary Age" },
+          "ask": {
+            "hi": "हितग्राही की उम्र कितनी है?",
+            "en": "What is the beneficiary's age?"
+          },
+          "required": true,
+          "parser": "number",
+          "validate": { "min": 0, "max": 120 },
+          "confirm": true
+        },
+        {
+          "id": "gender",
+          "domId": "TODO_gender",
+          "type": "select",
+          "optionsFrom": "dom",
+          "label": { "hi": "लिंग", "en": "Gender" },
+          "ask": {
+            "hi": "हितग्राही का लिंग क्या है? पुरुष, महिला या अन्य?",
+            "en": "What is the gender? Male, female or other?"
+          },
+          "required": true,
+          "parser": "option"
+        },
+        {
+          "id": "guardianName",
+          "domId": "TODO_guardianName",
+          "type": "text",
+          "label": { "hi": "हितग्राही के अभिभावक का नाम", "en": "Guardian's Name" },
+          "ask": {
+            "hi": "हितग्राही के अभिभावक का नाम बताइए।",
+            "en": "Please tell me the guardian's name."
+          },
+          "required": true,
+          "parser": "name",
+          "confirm": true
+        },
+        {
+          "id": "relationship",
+          "domId": "TODO_relationship",
+          "type": "select",
+          "optionsFrom": "dom",
+          "label": { "hi": "हितग्राही के साथ संबंध", "en": "Relationship with Beneficiary" },
+          "ask": {
+            "hi": "अभिभावक का हितग्राही के साथ क्या संबंध है? विकल्प हैं: {options}",
+            "en": "What is the guardian's relationship with the beneficiary? Options: {options}"
+          },
+          "required": true,
+          "parser": "option"
+        },
+        {
+          "id": "caste",
+          "domId": "TODO_caste",
+          "type": "select",
+          "optionsFrom": "dom",
+          "label": { "hi": "जाति", "en": "Caste" },
+          "ask": {
+            "hi": "आपकी जाति क्या है?",
+            "en": "What is your caste?"
+          },
+          "required": true,
+          "parser": "option",
+          "sensitive": true
+        },
+        {
+          "id": "categoryNumber",
+          "domId": "TODO_categoryNumber",
+          "type": "text",
+          "label": { "hi": "वर्ग का क्रमांक", "en": "Category Number" },
+          "ask": {
+            "hi": "वर्ग का क्रमांक बताइए। अंक एक-एक करके बोलिए।",
+            "en": "Please tell me the category number, digit by digit."
+          },
+          "required": false,
+          "parser": "digits",
+          "confirm": true
+        },
+        {
+          "id": "relativeName",
+          "domId": "TODO_relativeName",
+          "type": "text",
+          "label": {
+            "hi": "हितग्राही के पुत्र या पुत्री या पत्नी का नाम",
+            "en": "Beneficiary's Son, Daughter, or Wife Name"
+          },
+          "ask": {
+            "hi": "हितग्राही के पुत्र, पुत्री या पत्नी का नाम बताइए।",
+            "en": "Please tell me the name of the beneficiary's son, daughter or wife."
+          },
+          "required": false,
+          "parser": "name",
+          "confirm": true
+        },
+        {
+          "id": "category",
+          "domId": "TODO_category",
+          "type": "select",
+          "optionsFrom": "dom",
+          "label": { "hi": "श्रेणी", "en": "Category" },
+          "ask": {
+            "hi": "आपकी श्रेणी क्या है? विकल्प हैं: {options}",
+            "en": "What is your category? Options: {options}"
+          },
+          "required": true,
+          "parser": "option",
+          "sensitive": true
+        }
+      ],
+      "nextAction": { "type": "click", "selector": "TODO_btnNext1" }
+    },
+    {
+      "id": "page-2-address",
+      "step": 2,
+      "pageType": "form",
+      "title": {
+        "hi": "पता का विवरण",
+        "en": "Address Details"
+      },
+      "mascotIntro": {
+        "hi": "अब पता भरते हैं। पहले अपना पूरा पता बताइए।",
+        "en": "Now the address. First, tell me your full address."
+      },
+      "mascotOutro": {
+        "hi": "पता पूरा हुआ। अब आय की जानकारी भरते हैं।",
+        "en": "Address done. Now the income details."
+      },
+      "fields": [
+        {
+          "id": "address",
+          "domId": "TODO_address",
+          "type": "textarea",
+          "label": { "hi": "पता", "en": "Address" },
+          "ask": {
+            "hi": "अपना पूरा पता बताइए। मकान नंबर, मोहल्ला या गाँव, और थाना।",
+            "en": "Please tell me your full address: house number, locality or village, and police station."
+          },
+          "required": true,
+          "parser": "text",
+          "confirm": true,
+          "allowEditOnScreen": true
+        },
+        {
+          "id": "district",
+          "domId": "TODO_district",
+          "type": "select",
+          "optionsFrom": "dom",
+          "label": { "hi": "जिला", "en": "District" },
+          "ask": {
+            "hi": "आप किस जिले में रहते हैं?",
+            "en": "Which district do you live in?"
+          },
+          "required": true,
+          "parser": "option",
+          "fuzzyMatch": true
+        },
+        {
+          "id": "pinCode",
+          "domId": "TODO_pinCode",
+          "type": "text",
+          "label": { "hi": "पिन कोड", "en": "Pin Code" },
+          "ask": {
+            "hi": "अपना छह अंकों का पिन कोड बताइए।",
+            "en": "Please tell me your six-digit pin code."
+          },
+          "required": true,
+          "parser": "digits",
+          "validate": { "length": 6 },
+          "confirm": true,
+          "readBackAs": "digits"
+        }
+      ],
+      "nextAction": { "type": "click", "selector": "TODO_btnNext2" }
+    },
+    {
+      "id": "page-3-income",
+      "step": 3,
+      "pageType": "form",
+      "title": {
+        "hi": "आय का विवरण",
+        "en": "Income Details"
+      },
+      "mascotIntro": {
+        "hi": "आखिरी हिस्सा, आय का विवरण। इसके बाद हम सब कुछ एक बार जाँच लेंगे।",
+        "en": "Last part, the income details. After this we will review everything."
+      },
+      "mascotOutro": {
+        "hi": "आय की जानकारी भर गई। अब सब कुछ एक बार जाँच लेते हैं।",
+        "en": "Income details filled. Let's review everything now."
+      },
+      "fields": [
+        {
+          "id": "occupation",
+          "domId": "TODO_occupation",
+          "type": "select",
+          "optionsFrom": "dom",
+          "label": { "hi": "आवेदन का व्यवसाय या सेवा", "en": "Occupation or Service" },
+          "ask": {
+            "hi": "आपका व्यवसाय या सेवा क्या है?",
+            "en": "What is your occupation or service?"
+          },
+          "required": true,
+          "parser": "option",
+          "fuzzyMatch": true
+        },
+        {
+          "id": "reasonDescription",
+          "domId": "TODO_reasonDescription",
+          "type": "textarea",
+          "label": { "hi": "कारण का विवरण", "en": "Description of Reason" },
+          "ask": {
+            "hi": "आय प्रमाण पत्र किस कारण से चाहिए? थोड़ा बताइए।",
+            "en": "Why do you need the income certificate? Please describe briefly."
+          },
+          "required": true,
+          "parser": "text",
+          "confirm": true,
+          "allowEditOnScreen": true
+        },
+        {
+          "id": "annualIncome",
+          "domId": "TODO_annualIncome",
+          "type": "number",
+          "label": { "hi": "वार्षिक आय", "en": "Annual Income" },
+          "ask": {
+            "hi": "आपकी वार्षिक आय कितने रुपये है?",
+            "en": "What is your annual income in rupees?"
+          },
+          "required": true,
+          "parser": "amount",
+          "validate": { "min": 0 },
+          "confirm": true,
+          "readBackAs": "amount"
+        },
+        {
+          "id": "avgIncome3Years",
+          "domId": "TODO_avgIncome3Years",
+          "type": "number",
+          "label": {
+            "hi": "विगत 3 वर्षों की औसत वार्षिक आय",
+            "en": "Average Annual Income of Past 3 Years"
+          },
+          "ask": {
+            "hi": "पिछले तीन वर्षों की औसत वार्षिक आय कितनी है?",
+            "en": "What is the average annual income of the past three years?"
+          },
+          "required": true,
+          "parser": "amount",
+          "validate": { "min": 0 },
+          "confirm": true,
+          "readBackAs": "amount"
+        }
+      ],
+      "nextAction": { "type": "click", "selector": "TODO_btnNext3" }
+    },
+    {
+      "id": "page-4-review",
+      "step": 4,
+      "pageType": "review",
+      "title": {
+        "hi": "जाँच और पुष्टि",
+        "en": "Review and Confirm"
+      },
+      "mascotIntro": {
+        "hi": "अब मैं आपकी भरी हुई जानकारी पढ़ता हूँ। कुछ बदलना हो तो बताइए, जैसे 'पता बदलो'। सब सही हो तो 'जमा करो' बोलिए।",
+        "en": "Now I'll read back what you filled. To change something, say for example 'change address'. If everything is right, say 'submit'."
+      },
+      "mascotOutro": {
+        "hi": "धन्यवाद! आपका आवेदन तैयार है।",
+        "en": "Thank you! Your application is ready."
+      },
+      "commands": {
+        "submit": ["जमा करो", "सबमिट", "submit"],
+        "change": ["बदलो", "सुधारो", "change"]
+      }
+    }
+  ]
+}

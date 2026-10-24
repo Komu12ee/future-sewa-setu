@@ -1,0 +1,7 @@
+{
+  "id": "marriage-certificate",
+  "enabled": false,
+  "icon": "💍",
+  "title": { "hi": "विवाह प्रमाण पत्र", "en": "Marriage Certificate" },
+  "keywords": ["विवाह", "marriage", "शादी"]
+}

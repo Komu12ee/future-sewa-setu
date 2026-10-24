@@ -1,0 +1,149 @@
+<div class="seva-container">
+  <h1 class="seva-page-title">आय प्रमाण पत्र</h1>
+
+  <!-- Section 1: हितग्राही की जानकारी -->
+  <div class="seva-section-pill">हितग्राही की जानकारी</div>
+  <div class="seva-step2-grid">
+    <div class="seva-step2-row">
+      <label class="seva-label" for="beneficiaryGender">लिंग<span class="seva-required">*</span></label>
+      <select id="beneficiaryGender" class="seva-select" required>
+        <option value="">चुनें</option>
+        <option value="महिला/Female">महिला/Female</option>
+        <option value="पुरुष/Male">पुरुष/Male</option>
+        <option value="अन्य/Other">अन्य/Other</option>
+      </select>
+    </div>
+
+    <div class="seva-step2-row">
+      <label class="seva-label" for="beneficiaryAge">हितग्राही की उम्र<span class="seva-required">*</span></label>
+      <input type="number" id="beneficiaryAge" class="seva-input" min="0" max="120" placeholder="उम्र (वर्ष)" required />
+    </div>
+
+    <div class="seva-step2-row">
+      <label class="seva-label" for="guardianType">हितग्राही के अभिभावक का प्रकार<span class="seva-required">*</span></label>
+      <select id="guardianType" class="seva-select" required>
+        <option value="">चुनें</option>
+        <option value="पिता">पिता</option>
+        <option value="पति">पति</option>
+        <option value="माता">माता</option>
+        <option value="संरक्षक">संरक्षक</option>
+      </select>
+    </div>
+
+    <div class="seva-step2-row">
+      <label class="seva-label" for="guardianName">हितग्राही के अभिभावक का नाम<span class="seva-required">*</span></label>
+      <input type="text" id="guardianName" class="seva-input" placeholder="अभिभावक का नाम" required />
+    </div>
+
+    <div class="seva-step2-row">
+      <label class="seva-label" for="relationship">हितग्राही के साथ संबंध<span class="seva-required">*</span></label>
+      <select id="relationship" class="seva-select" required>
+        <option value="">चुनें</option>
+        <option value="स्वयं">स्वयं</option>
+        <option value="पुत्र">पुत्र</option>
+        <option value="पुत्री">पुत्री</option>
+        <option value="पत्नी">पत्नी</option>
+        <option value="अन्य">अन्य</option>
+      </select>
+    </div>
+
+    <div class="seva-step2-row">
+      <label class="seva-label" for="relativeName">हितग्राही के पुत्र या पुत्री या पत्नी नाम</label>
+      <input type="text" id="relativeName" class="seva-input" placeholder="----" disabled />
+    </div>
+
+    <div class="seva-step2-row">
+      <label class="seva-label" for="caste">जाति<span class="seva-required">*</span></label>
+      <div class="seva-search-group">
+        <input type="text" id="caste" class="seva-input" placeholder="Search" required />
+        <button type="button" id="btnSearchCaste" class="seva-search-btn" title="Search Caste">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="seva-step2-row">
+      <label class="seva-label" for="category">श्रेणी<span class="seva-required">*</span></label>
+      <input type="text" id="category" class="seva-input" value="अन्य पिछड़ा वर्ग" readonly />
+    </div>
+
+    <div class="seva-step2-row">
+      <label class="seva-label" for="categoryNumber">वर्ग का क्रमांक<span class="seva-required">*</span></label>
+      <input type="text" id="categoryNumber" class="seva-input" value="32" placeholder="वर्ग क्रमांक" />
+    </div>
+  </div>
+
+  <!-- Section 2: पता का विवरण -->
+  <div class="seva-section-pill">पता का विवरण</div>
+  <div class="seva-step2-grid">
+    <div class="seva-step2-row">
+      <label class="seva-label" for="beneficiaryAddress">पता<span class="seva-required">*</span></label>
+      <input type="text" id="beneficiaryAddress" class="seva-input" required />
+    </div>
+
+    <div class="seva-step2-row">
+      <label class="seva-label" for="pinCode">पिन कोड</label>
+      <input type="text" id="pinCode" class="seva-input" placeholder="6 अंकों का पिन कोड" maxlength="6" />
+    </div>
+
+    <div class="seva-step2-row">
+      <label class="seva-label" for="beneficiaryDistrict">जिला<span class="seva-required">*</span></label>
+      <select id="beneficiaryDistrict" class="seva-select" required>
+        <option value="बालोद" selected>बालोद</option>
+        <option value="रायपुर">रायपुर</option>
+        <option value="दुर्ग">दुर्ग</option>
+        <option value="बिलासपुर">बिलासपुर</option>
+        <option value="बस्तर">बस्तर</option>
+        <option value="राजनांदगांव">राजनांदगांव</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Section 3: आय का विवरण -->
+  <div class="seva-section-pill">आय का विवरण</div>
+  <div class="seva-step2-grid">
+    <div class="seva-step2-row">
+      <label class="seva-label" for="occupation">व्यवसाय या सेवा का विवरण<span class="seva-required">*</span></label>
+      <div class="seva-search-group">
+        <input type="text" id="occupation" class="seva-input" placeholder="Search" value="भौतिकीय, गणितीय तथा अभियांत्रिकी विज्ञान पेशेवर" required />
+        <button type="button" id="btnSearchOccupation" class="seva-search-btn" title="Search Occupation">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="seva-step2-row">
+      <label class="seva-label" for="reasonDescription">आवेदन का कारण<span class="seva-required">*</span></label>
+      <input type="text" id="reasonDescription" class="seva-input" placeholder="आवेदन का कारण" value="शैक्षणिक प्रमाण पत्र" required />
+    </div>
+
+    <div class="seva-step2-row">
+      <label class="seva-label" for="annualIncome">वार्षिक आय</label>
+      <input type="number" id="annualIncome" class="seva-input" placeholder="वार्षिक आय (रुपये)" value="4356" />
+    </div>
+
+    <div class="seva-step2-row">
+      <label class="seva-label" for="avgIncome3Years">विगत 3 वर्षों की औसत वार्षिक आय</label>
+      <input type="text" id="avgIncome3Years" class="seva-input" placeholder="----" disabled />
+    </div>
+
+    <div class="seva-step2-consent-row">
+      <div class="seva-step2-consent-text">
+        मैं सहमति देता/देती हूँ कि यदि निर्धारित समय सीमा के भीतर आवेदनित लोक सेवा प्रदान नहीं की जाती है, तो मेरी ओर से सक्षम अधिकारी के समक्ष लोक सेवा गारंटी नियम, 2011 के नियम 6 के अंतर्गत स्वतः शिकायत/अपील दर्ज की जाए। <span class="seva-required">*</span>
+      </div>
+      <div class="seva-step2-consent-select">
+        <select id="slaConsent" class="seva-select" required>
+          <option value="">चुनें</option>
+          <option value="हाँ" selected>हाँ</option>
+          <option value="नहीं">नहीं</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="seva-actions-bar">
+    <button type="button" id="btnStep2Next" class="seva-btn seva-btn-green">सहेजें और पूर्वावलोकन</button>
+    <button type="button" id="btnStep2Edit" class="seva-btn seva-btn-yellow">सुधारे</button>
+    <button type="button" id="btnStep2Back" class="seva-btn seva-btn-dark">पीछे</button>
+  </div>
+</div>

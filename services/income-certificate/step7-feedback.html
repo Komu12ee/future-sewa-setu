@@ -1,0 +1,32 @@
+<div class="seva-modal-overlay" id="feedbackModalOverlay">
+  <div class="seva-feedback-modal">
+    <div class="seva-modal-header" style="background: #ffffff; color: #1e293b; border-bottom: 1px solid #e2e8f0;">
+      <span style="font-size: 18px; font-weight: 700;">लाभार्थी के लिए संतुष्टि सूचकांक</span>
+      <button type="button" class="seva-modal-close" id="btnCloseFeedbackModal" style="color: #64748b;">&times;</button>
+    </div>
+
+    <div class="seva-modal-body" style="text-align: left; padding: 24px;">
+      <p style="font-size: 15px; font-weight: 600; color: #334155; margin-bottom: 16px;">
+        क्या आप सेवा सेतु के साथ अपने अनुभव का मूल्यांकन करेंगे?
+      </p>
+
+      <div class="seva-form-group" style="margin-bottom: 16px;">
+        <label class="seva-label" for="feedbackText">संदेश</label>
+        <textarea id="feedbackText" class="seva-textarea" style="min-height: 85px;" placeholder="अपना संदेश यहाँ लिखें..."></textarea>
+      </div>
+
+      <!-- 5 Interactive Stars -->
+      <div class="seva-stars-row" id="starsContainer" style="justify-content: flex-start;">
+        <span class="seva-star active" data-rating="1">★</span>
+        <span class="seva-star active" data-rating="2">★</span>
+        <span class="seva-star active" data-rating="3">★</span>
+        <span class="seva-star active" data-rating="4">★</span>
+        <span class="seva-star active" data-rating="5">★</span>
+      </div>
+
+      <div style="margin-top: 20px;">
+        <button type="button" id="btnSubmitFeedback" class="seva-btn seva-btn-green">संदेश भेजे</button>
+      </div>
+    </div>
+  </div>
+</div>

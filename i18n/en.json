@@ -1,0 +1,46 @@
+{
+  "greeting": "Welcome to the AI-based Seva Setu Future Experience Zone!",
+  "touchToStart": "Touch the screen to start",
+  "profile": {
+    "nameAsk": "Please tell me your name.",
+    "districtAsk": "Which district are you from?",
+    "mobileAsk": "Please tell me your 10-digit mobile number.",
+    "confirm": "You said {value}, is that correct?"
+  },
+  "serviceMenu": {
+    "ask": "Which service would you like to apply for? Income, Caste, Marriage, or Domicile certificate?",
+    "confirm": "You selected {service}, is that correct?",
+    "opening": "Alright, opening the form. I will guide you with voice."
+  },
+  "form": {
+    "pageIntro": "Let's first fill your basic details.",
+    "pageQuestion": "Shall we proceed to the next page?",
+    "changePrompt": "Would you like to change any detail?",
+    "whichField": "Which detail would you like to change?",
+    "reverify": "Your {label} is {value}. Keep it or change it?",
+    "notHeard": "I couldn't hear that, please repeat.",
+    "docsIntro": "For now, I am uploading sample demo documents.",
+    "docsDone": "All documents are uploaded. Shall we proceed?",
+    "previewIntro": "Please review your filled details on screen.",
+    "previewConfirm": "Is all the information correct?",
+    "declarationConfirm": "Do you agree with the declaration and wish to submit?",
+    "feeIntro": "The total fee is 30 rupees, eWallet is selected.",
+    "paymentSuccess": "Payment was successful.",
+    "feedbackAsk": "How many stars from 1 to 5 would you rate us?",
+    "thankYou": "Congratulations! You have successfully experienced the future Seva Setu form filling. Thank you!",
+    "areYouThere": "Are you there?"
+  },
+  "buttons": {
+    "next": "Submit",
+    "reset": "Reset",
+    "savePreview": "Save & Preview",
+    "edit": "Edit",
+    "back": "Back",
+    "saveDocs": "Save Attachments",
+    "close": "Close",
+    "confirm": "Confirm",
+    "send": "Send Message",
+    "print": "Print",
+    "newReg": "New Registration"
+  }
+}

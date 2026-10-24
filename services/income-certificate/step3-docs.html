@@ -1,0 +1,248 @@
+<div class="seva-container">
+  <h1 class="seva-page-title" style="margin-bottom: 8px;">अनुलग्नक का विवरण</h1>
+
+  <div class="seva-docs-note">
+    <strong>नोट:</strong><br />
+    • चिन्हित दस्तावेज लगाना अनिवार्य है (*)<br />
+    • समान संलग्नक प्रकार का कम से कम एक दस्तावेज़ आवश्यक है।(#)<br />
+    • कृपया केवल अधिकतम 750kb की फ़ाइल (jpeg/jpg/png/pdf) अपलोड करें |
+  </div>
+
+  <table class="seva-table" id="docsTable">
+    <thead>
+      <tr>
+        <th style="width: 60px;">क्रमांक नं</th>
+        <th style="width: 130px;">दस्तावेज़ का नाम</th>
+        <th>दस्तावेज़</th>
+        <th style="width: 140px;">दस्तावेज़ संख्या</th>
+        <th style="width: 130px;">संलग्न प्रकार</th>
+        <th style="width: 260px;">फ़ाइल अपलोड करें</th>
+        <th style="width: 90px; text-align: center;">डिजिटल लॉकर</th>
+        <th style="width: 60px; text-align: center;">हटाए</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Row 1 -->
+      <tr id="docRow_1" data-row="1">
+        <td>1</td>
+        <td>शपथ पत्र <span class="seva-required">*</span></td>
+        <td>शपथ पत्र</td>
+        <td><input type="text" id="docNum_1" class="seva-input" value="DEMO-001" /></td>
+        <td>
+          <select id="docType_1" class="seva-select">
+            <option value="अपलोड" selected>अपलोड</option>
+            <option value="डिजिटल लॉकर">डिजिटल लॉकर</option>
+          </select>
+        </td>
+        <td>
+          <div class="upload-control-wrap">
+            <input type="file" id="file_1" class="doc-file-input" style="display:none;" />
+            <div style="display: flex; gap: 8px; align-items: center;">
+              <button type="button" class="seva-btn seva-btn-navy btn-choose-file" style="padding: 4px 10px; font-size: 12px;">Choose File</button>
+              <span class="file-name-label" id="fileName_1" style="font-size: 12px; color: #64748b;">No file chosen</span>
+            </div>
+            <button type="button" id="btnUpload_1" class="seva-btn seva-btn-navy btn-row-upload" style="margin-top: 6px; padding: 4px 14px; font-size: 12px; background: #0066cc;">Upload</button>
+            <span class="upload-status" id="uploadStatus_1" style="display:none;">✓ संलग्न</span>
+          </div>
+        </td>
+        <td style="text-align: center;">-</td>
+        <td style="text-align: center;"><input type="checkbox" class="seva-checkbox" /></td>
+      </tr>
+
+      <!-- Row 2 -->
+      <tr id="docRow_2" data-row="2">
+        <td>2</td>
+        <td>आय प्रमाण <span style="color:#b45309; font-weight:bold;">#</span></td>
+        <td>पटवारी/सरपंच/पार्षद से प्रमाण पत्र</td>
+        <td><input type="text" id="docNum_2" class="seva-input" value="DEMO-002" /></td>
+        <td>
+          <select id="docType_2" class="seva-select">
+            <option value="अपलोड" selected>अपलोड</option>
+            <option value="डिजिटल लॉकर">डिजिटल लॉकर</option>
+          </select>
+        </td>
+        <td>
+          <div class="upload-control-wrap">
+            <input type="file" id="file_2" class="doc-file-input" style="display:none;" />
+            <div style="display: flex; gap: 8px; align-items: center;">
+              <button type="button" class="seva-btn seva-btn-navy btn-choose-file" style="padding: 4px 10px; font-size: 12px;">Choose File</button>
+              <span class="file-name-label" id="fileName_2" style="font-size: 12px; color: #64748b;">No file chosen</span>
+            </div>
+            <button type="button" id="btnUpload_2" class="seva-btn seva-btn-navy btn-row-upload" style="margin-top: 6px; padding: 4px 14px; font-size: 12px; background: #0066cc;">Upload</button>
+            <span class="upload-status" id="uploadStatus_2" style="display:none;">✓ संलग्न</span>
+          </div>
+        </td>
+        <td style="text-align: center;">-</td>
+        <td style="text-align: center;"><input type="checkbox" class="seva-checkbox" /></td>
+      </tr>
+
+      <!-- Row 3 -->
+      <tr id="docRow_3" data-row="3">
+        <td>3</td>
+        <td>आय प्रमाण <span style="color:#b45309; font-weight:bold;">#</span></td>
+        <td>नियोक्ता का आय प्रमाण पत्र/फार्म १६</td>
+        <td><input type="text" id="docNum_3" class="seva-input" value="DEMO-003" /></td>
+        <td>
+          <select id="docType_3" class="seva-select">
+            <option value="अपलोड" selected>अपलोड</option>
+            <option value="डिजिटल लॉकर">डिजिटल लॉकर</option>
+          </select>
+        </td>
+        <td>
+          <div class="upload-control-wrap">
+            <input type="file" id="file_3" class="doc-file-input" style="display:none;" />
+            <div style="display: flex; gap: 8px; align-items: center;">
+              <button type="button" class="seva-btn seva-btn-navy btn-choose-file" style="padding: 4px 10px; font-size: 12px;">Choose File</button>
+              <span class="file-name-label" id="fileName_3" style="font-size: 12px; color: #64748b;">No file chosen</span>
+            </div>
+            <button type="button" id="btnUpload_3" class="seva-btn seva-btn-navy btn-row-upload" style="margin-top: 6px; padding: 4px 14px; font-size: 12px; background: #0066cc;">Upload</button>
+            <span class="upload-status" id="uploadStatus_3" style="display:none;">✓ संलग्न</span>
+          </div>
+        </td>
+        <td style="text-align: center;">-</td>
+        <td style="text-align: center;"><input type="checkbox" class="seva-checkbox" /></td>
+      </tr>
+
+      <!-- Row 4 -->
+      <tr id="docRow_4" data-row="4">
+        <td>4</td>
+        <td>आय प्रमाण <span style="color:#b45309; font-weight:bold;">#</span></td>
+        <td>भूमि/घर से आय</td>
+        <td><input type="text" id="docNum_4" class="seva-input" value="DEMO-004" /></td>
+        <td>
+          <select id="docType_4" class="seva-select">
+            <option value="अपलोड" selected>अपलोड</option>
+            <option value="डिजिटल लॉकर">डिजिटल लॉकर</option>
+          </select>
+        </td>
+        <td>
+          <div class="upload-control-wrap">
+            <input type="file" id="file_4" class="doc-file-input" style="display:none;" />
+            <div style="display: flex; gap: 8px; align-items: center;">
+              <button type="button" class="seva-btn seva-btn-navy btn-choose-file" style="padding: 4px 10px; font-size: 12px;">Choose File</button>
+              <span class="file-name-label" id="fileName_4" style="font-size: 12px; color: #64748b;">No file chosen</span>
+            </div>
+            <button type="button" id="btnUpload_4" class="seva-btn seva-btn-navy btn-row-upload" style="margin-top: 6px; padding: 4px 14px; font-size: 12px; background: #0066cc;">Upload</button>
+            <span class="upload-status" id="uploadStatus_4" style="display:none;">✓ संलग्न</span>
+          </div>
+        </td>
+        <td style="text-align: center;">-</td>
+        <td style="text-align: center;"><input type="checkbox" class="seva-checkbox" /></td>
+      </tr>
+
+      <!-- Row 5 -->
+      <tr id="docRow_5" data-row="5">
+        <td>5</td>
+        <td>आय प्रमाण <span style="color:#b45309; font-weight:bold;">#</span></td>
+        <td>अन्य</td>
+        <td><input type="text" id="docNum_5" class="seva-input" value="DEMO-005" /></td>
+        <td>
+          <select id="docType_5" class="seva-select">
+            <option value="अपलोड" selected>अपलोड</option>
+            <option value="डिजिटल लॉकर">डिजिटल लॉकर</option>
+          </select>
+        </td>
+        <td>
+          <div class="upload-control-wrap">
+            <input type="file" id="file_5" class="doc-file-input" style="display:none;" />
+            <div style="display: flex; gap: 8px; align-items: center;">
+              <button type="button" class="seva-btn seva-btn-navy btn-choose-file" style="padding: 4px 10px; font-size: 12px;">Choose File</button>
+              <span class="file-name-label" id="fileName_5" style="font-size: 12px; color: #64748b;">No file chosen</span>
+            </div>
+            <button type="button" id="btnUpload_5" class="seva-btn seva-btn-navy btn-row-upload" style="margin-top: 6px; padding: 4px 14px; font-size: 12px; background: #0066cc;">Upload</button>
+            <span class="upload-status" id="uploadStatus_5" style="display:none;">✓ संलग्न</span>
+          </div>
+        </td>
+        <td style="text-align: center;">-</td>
+        <td style="text-align: center;"><input type="checkbox" class="seva-checkbox" /></td>
+      </tr>
+
+      <!-- Row 6 -->
+      <tr id="docRow_6" data-row="6">
+        <td>6</td>
+        <td>आय प्रमाण <span style="color:#b45309; font-weight:bold;">#</span></td>
+        <td>आवेदन प्रपत्र</td>
+        <td><input type="text" id="docNum_6" class="seva-input" value="DEMO-006" /></td>
+        <td>
+          <select id="docType_6" class="seva-select">
+            <option value="अपलोड" selected>अपलोड</option>
+            <option value="डिजिटल लॉकर">डिजिटल लॉकर</option>
+          </select>
+        </td>
+        <td>
+          <div class="upload-control-wrap">
+            <input type="file" id="file_6" class="doc-file-input" style="display:none;" />
+            <div style="display: flex; gap: 8px; align-items: center;">
+              <button type="button" class="seva-btn seva-btn-navy btn-choose-file" style="padding: 4px 10px; font-size: 12px;">Choose File</button>
+              <span class="file-name-label" id="fileName_6" style="font-size: 12px; color: #64748b;">No file chosen</span>
+            </div>
+            <button type="button" id="btnUpload_6" class="seva-btn seva-btn-navy btn-row-upload" style="margin-top: 6px; padding: 4px 14px; font-size: 12px; background: #0066cc;">Upload</button>
+            <span class="upload-status" id="uploadStatus_6" style="display:none;">✓ संलग्न</span>
+          </div>
+        </td>
+        <td style="text-align: center;">-</td>
+        <td style="text-align: center;"><input type="checkbox" class="seva-checkbox" /></td>
+      </tr>
+
+      <!-- Row 7 -->
+      <tr id="docRow_7" data-row="7">
+        <td>7</td>
+        <td>आय प्रमाण <span style="color:#b45309; font-weight:bold;">#</span></td>
+        <td>फार्म 16</td>
+        <td><input type="text" id="docNum_7" class="seva-input" value="DEMO-007" /></td>
+        <td>
+          <select id="docType_7" class="seva-select">
+            <option value="अपलोड" selected>अपलोड</option>
+            <option value="डिजिटल लॉकर">डिजिटल लॉकर</option>
+          </select>
+        </td>
+        <td>
+          <div class="upload-control-wrap">
+            <input type="file" id="file_7" class="doc-file-input" style="display:none;" />
+            <div style="display: flex; gap: 8px; align-items: center;">
+              <button type="button" class="seva-btn seva-btn-navy btn-choose-file" style="padding: 4px 10px; font-size: 12px;">Choose File</button>
+              <span class="file-name-label" id="fileName_7" style="font-size: 12px; color: #64748b;">No file chosen</span>
+            </div>
+            <button type="button" id="btnUpload_7" class="seva-btn seva-btn-navy btn-row-upload" style="margin-top: 6px; padding: 4px 14px; font-size: 12px; background: #0066cc;">Upload</button>
+            <span class="upload-status" id="uploadStatus_7" style="display:none;">✓ संलग्न</span>
+          </div>
+        </td>
+        <td style="text-align: center;">-</td>
+        <td style="text-align: center;"><input type="checkbox" class="seva-checkbox" /></td>
+      </tr>
+
+      <!-- Row 8 -->
+      <tr id="docRow_8" data-row="8">
+        <td>8</td>
+        <td>आय प्रमाण <span style="color:#b45309; font-weight:bold;">#</span></td>
+        <td>परिवार के अन्य सदस्यों आय</td>
+        <td><input type="text" id="docNum_8" class="seva-input" value="DEMO-008" /></td>
+        <td>
+          <select id="docType_8" class="seva-select">
+            <option value="अपलोड" selected>अपलोड</option>
+            <option value="डिजिटल लॉकर">डिजिटल लॉकर</option>
+          </select>
+        </td>
+        <td>
+          <div class="upload-control-wrap">
+            <input type="file" id="file_8" class="doc-file-input" style="display:none;" />
+            <div style="display: flex; gap: 8px; align-items: center;">
+              <button type="button" class="seva-btn seva-btn-navy btn-choose-file" style="padding: 4px 10px; font-size: 12px;">Choose File</button>
+              <span class="file-name-label" id="fileName_8" style="font-size: 12px; color: #64748b;">No file chosen</span>
+            </div>
+            <button type="button" id="btnUpload_8" class="seva-btn seva-btn-navy btn-row-upload" style="margin-top: 6px; padding: 4px 14px; font-size: 12px; background: #0066cc;">Upload</button>
+            <span class="upload-status" id="uploadStatus_8" style="display:none;">✓ संलग्न</span>
+          </div>
+        </td>
+        <td style="text-align: center;">-</td>
+        <td style="text-align: center;"><input type="checkbox" class="seva-checkbox" /></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="seva-actions-bar">
+    <button type="button" id="btnSaveDocs" class="seva-btn seva-btn-green">अनुलग्नक सहेजें</button>
+    <button type="button" id="btnCloseDocs" class="seva-btn seva-btn-red">बंद</button>
+    <button type="button" id="btnBackDocs" class="seva-btn seva-btn-navy">पीछे</button>
+  </div>
+</div>

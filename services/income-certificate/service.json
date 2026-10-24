@@ -1,0 +1,297 @@
+{
+  "id": "income-certificate",
+  "enabled": true,
+  "title": { "hi": "आय प्रमाण पत्र", "en": "Income Certificate" },
+  "icon": "📜",
+  "keywords": ["आय", "इनकम", "income", "आय प्रमाण पत्र"],
+  "pages": [
+    {
+      "id": "step1",
+      "step": 1,
+      "template": "step1.html",
+      "intro": { "hi": "पहले आपकी बुनियादी जानकारी भरते हैं।" },
+      "fields": [
+        {
+          "id": "applicantName",
+          "selector": "#applicantName",
+          "label": { "hi": "आवेदक का नाम" },
+          "ask": { "hi": "आवेदक का नाम बताइए।" },
+          "type": "text",
+          "parser": "name",
+          "required": true,
+          "prefillFrom": "profile.name",
+          "confirm": true
+        },
+        {
+          "id": "beneficiaryName",
+          "selector": "#beneficiaryName",
+          "label": { "hi": "हितग्राही का नाम" },
+          "ask": { "hi": "हितग्राही का नाम बताइए।" },
+          "type": "text",
+          "parser": "name",
+          "required": true,
+          "prefillFrom": "profile.name"
+        },
+        {
+          "id": "sameApplicantBeneficiary",
+          "selector": "#sameApplicantBeneficiary",
+          "type": "checkbox",
+          "auto": true
+        },
+        {
+          "id": "applicantEmail",
+          "selector": "#applicantEmail",
+          "type": "text",
+          "auto": true
+        },
+        {
+          "id": "applicantMobile",
+          "selector": "#applicantMobile",
+          "label": { "hi": "मोबाइल नंबर" },
+          "ask": { "hi": "अपना दस अंकों का मोबाइल नंबर बताइए।" },
+          "type": "tel",
+          "parser": "digits",
+          "required": true,
+          "prefillFrom": "profile.mobile",
+          "confirm": true
+        },
+        {
+          "id": "applicationDate",
+          "selector": "#applicationDate",
+          "type": "text",
+          "auto": true
+        },
+        {
+          "id": "applicantAddress",
+          "selector": "#applicantAddress",
+          "label": { "hi": "आवेदक का पता" },
+          "ask": { "hi": "अपना पता बताइए।" },
+          "type": "textarea",
+          "parser": "text",
+          "required": true,
+          "confirm": true
+        },
+        {
+          "id": "officeDistrict",
+          "selector": "#officeDistrict",
+          "label": { "hi": "जिला" },
+          "ask": { "hi": "कार्यालय के लिए जिला कौन सा है?" },
+          "type": "select",
+          "parser": "option",
+          "required": true,
+          "prefillFrom": "profile.district"
+        },
+        {
+          "id": "officeType",
+          "selector": "#officeType",
+          "label": { "hi": "कार्यालय प्रकार" },
+          "type": "select",
+          "parser": "option",
+          "auto": true
+        },
+        {
+          "id": "officeTehsil",
+          "selector": "#officeTehsil",
+          "label": { "hi": "तहसील" },
+          "ask": { "hi": "आपकी तहसील कौन सी है?" },
+          "type": "select",
+          "parser": "option",
+          "required": true,
+          "dependsOn": "officeDistrict",
+          "waitForOptions": true
+        },
+        {
+          "id": "officeVillage",
+          "selector": "#officeVillage",
+          "label": { "hi": "राजस्व गांव" },
+          "ask": { "hi": "आपका राजस्व गांव कौन सा है?" },
+          "type": "select",
+          "parser": "option",
+          "required": true,
+          "dependsOn": "officeTehsil",
+          "waitForOptions": true
+        }
+      ],
+      "pageQuestion": true,
+      "nextAction": { "type": "click", "selector": "#btnStep1Next" }
+    },
+    {
+      "id": "step2",
+      "step": 2,
+      "template": "step2.html",
+      "intro": { "hi": "अब हितग्राही और आय की जानकारी भरते हैं।" },
+      "fields": [
+        {
+          "id": "beneficiaryGender",
+          "selector": "#beneficiaryGender",
+          "label": { "hi": "लिंग" },
+          "ask": { "hi": "हितग्राही का लिंग क्या है? पुरुष, महिला या अन्य?" },
+          "type": "select",
+          "parser": "option",
+          "required": true
+        },
+        {
+          "id": "beneficiaryAge",
+          "selector": "#beneficiaryAge",
+          "label": { "hi": "हितग्राही की उम्र" },
+          "ask": { "hi": "हितग्राही की उम्र कितनी है?" },
+          "type": "number",
+          "parser": "number",
+          "required": true,
+          "confirm": true
+        },
+        {
+          "id": "guardianType",
+          "selector": "#guardianType",
+          "label": { "hi": "अभिभावक का प्रकार" },
+          "ask": { "hi": "अभिभावक का प्रकार क्या है? पिता, पति, माता या संरक्षक?" },
+          "type": "select",
+          "parser": "option",
+          "required": true
+        },
+        {
+          "id": "guardianName",
+          "selector": "#guardianName",
+          "label": { "hi": "अभिभावक का नाम" },
+          "ask": { "hi": "अभिभावक का नाम बताइए।" },
+          "type": "text",
+          "parser": "name",
+          "required": true,
+          "confirm": true
+        },
+        {
+          "id": "relationship",
+          "selector": "#relationship",
+          "label": { "hi": "हितग्राही के साथ संबंध" },
+          "ask": { "hi": "हितग्राही के साथ संबंध क्या है? स्वयं, पुत्र, पुत्री या पत्नी?" },
+          "type": "select",
+          "parser": "option",
+          "required": true
+        },
+        {
+          "id": "relativeName",
+          "selector": "#relativeName",
+          "auto": true
+        },
+        {
+          "id": "caste",
+          "selector": "#caste",
+          "label": { "hi": "जाति" },
+          "ask": { "hi": "आपकी जाति क्या है?" },
+          "type": "text",
+          "parser": "text",
+          "required": true
+        },
+        {
+          "id": "category",
+          "selector": "#category",
+          "auto": true
+        },
+        {
+          "id": "categoryNumber",
+          "selector": "#categoryNumber",
+          "auto": true
+        },
+        {
+          "id": "beneficiaryAddress",
+          "selector": "#beneficiaryAddress",
+          "label": { "hi": "पता" },
+          "prefillFrom": "formData.applicantAddress",
+          "type": "text",
+          "parser": "text"
+        },
+        {
+          "id": "pinCode",
+          "selector": "#pinCode",
+          "label": { "hi": "पिन कोड" },
+          "ask": { "hi": "अपना छह अंकों का पिन कोड बताइए।" },
+          "type": "text",
+          "parser": "digits",
+          "confirm": true
+        },
+        {
+          "id": "beneficiaryDistrict",
+          "selector": "#beneficiaryDistrict",
+          "label": { "hi": "जिला" },
+          "prefillFrom": "profile.district",
+          "type": "select",
+          "parser": "option"
+        },
+        {
+          "id": "occupation",
+          "selector": "#occupation",
+          "label": { "hi": "व्यवसाय या सेवा" },
+          "ask": { "hi": "आपका व्यवसाय या सेवा क्या है?" },
+          "type": "text",
+          "parser": "text",
+          "required": true
+        },
+        {
+          "id": "reasonDescription",
+          "selector": "#reasonDescription",
+          "label": { "hi": "आवेदन का कारण" },
+          "ask": { "hi": "आय प्रमाण पत्र किस कारण से चाहिए?" },
+          "type": "text",
+          "parser": "text",
+          "required": true
+        },
+        {
+          "id": "annualIncome",
+          "selector": "#annualIncome",
+          "label": { "hi": "वार्षिक आय" },
+          "ask": { "hi": "आपकी वार्षिक आय कितने रुपये है?" },
+          "type": "number",
+          "parser": "amount",
+          "confirm": true,
+          "required": true
+        },
+        {
+          "id": "avgIncome3Years",
+          "selector": "#avgIncome3Years",
+          "auto": true
+        },
+        {
+          "id": "slaConsent",
+          "selector": "#slaConsent",
+          "label": { "hi": "सहमति" },
+          "ask": { "hi": "अगर समय पर सेवा न मिले तो आपकी ओर से स्वतः शिकायत दर्ज होगी। क्या आप सहमत हैं?" },
+          "type": "select",
+          "parser": "yesno",
+          "required": true
+        }
+      ],
+      "pageQuestion": true,
+      "nextAction": { "type": "click", "selector": "#btnStep2Next" }
+    }
+  ],
+  "documents": {
+    "template": "step3-docs.html",
+    "rowCount": 8,
+    "dummyFile": "./assets/dummy-docs/dummy-doc.pdf",
+    "saveButton": "#btnSaveDocs"
+  },
+  "preview": {
+    "template": "step4-preview.html",
+    "declarationCheckbox": "#declarationCheck",
+    "submitButton": "#btnPreviewSubmit"
+  },
+  "fee": {
+    "template": "step5-fee.html",
+    "paymentMethod": "eWallet",
+    "submitButton": "#btnFeeSubmit"
+  },
+  "payment": {
+    "template": "step6-payment.html",
+    "amount": "₹30.00",
+    "confirmButton": "#btnConfirmPayment"
+  },
+  "feedback": {
+    "template": "step7-feedback.html",
+    "submitButton": "#btnSubmitFeedback"
+  },
+  "receipt": {
+    "template": "step8-receipt.html",
+    "printButton": "#btnPrintReceipt",
+    "newRegButton": "#btnNewRegistration"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "ai-seva-setu-kiosk",
+  "version": "1.0.0",
+  "description": "AI Seva Setu Voice Mascot Form-Filling Kiosk",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host --port 5173",
+    "server": "node server/index.js",
+    "start": "node server/index.js",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "vite": "^5.4.10"
+  }
+}

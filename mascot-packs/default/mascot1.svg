@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 320" width="300" height="320">
+  <defs>
+    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0072ff"/>
+      <stop offset="100%" stop-color="#00c6ff"/>
+    </linearGradient>
+    <linearGradient id="faceGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Antenna -->
+  <line x1="150" y1="35" x2="150" y2="70" stroke="#0072ff" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="150" cy="30" r="12" fill="#ffd166" filter="url(#neonGlow)"/>
+  <circle cx="150" cy="30" r="6" fill="#fff"/>
+
+  <!-- Headphones / Ears -->
+  <rect x="52" y="105" width="18" height="42" rx="9" fill="#0056b3"/>
+  <rect x="230" y="105" width="18" height="42" rx="9" fill="#0056b3"/>
+  <path d="M 60,110 A 90,90 0 0,1 240,110" fill="none" stroke="#0056b3" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Head / Screen Frame -->
+  <rect x="65" y="70" width="170" height="120" rx="36" fill="url(#bodyGrad)" stroke="#ffffff" stroke-width="3"/>
+  <rect x="77" y="82" width="146" height="96" rx="26" fill="url(#faceGrad)"/>
+
+  <!-- Eyes (Glowing cyan) -->
+  <ellipse cx="115" cy="120" rx="14" ry="18" fill="#00f2fe" filter="url(#neonGlow)"/>
+  <ellipse cx="185" cy="120" rx="14" ry="18" fill="#00f2fe" filter="url(#neonGlow)"/>
+  <ellipse cx="112" cy="116" rx="5" ry="7" fill="#ffffff"/>
+  <ellipse cx="182" cy="116" rx="5" ry="7" fill="#ffffff"/>
+
+  <!-- Smile / Mouth -->
+  <path d="M 130,148 Q 150,165 170,148" fill="none" stroke="#00f2fe" stroke-width="4" stroke-linecap="round" filter="url(#neonGlow)"/>
+
+  <!-- Cheeks Blush -->
+  <circle cx="98" cy="138" r="8" fill="#ff7675" opacity="0.6"/>
+  <circle cx="202" cy="138" r="8" fill="#ff7675" opacity="0.6"/>
+
+  <!-- Microphone Boom -->
+  <path d="M 60,135 Q 80,185 125,182" fill="none" stroke="#475569" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="125" cy="182" r="7" fill="#ffd166"/>
+
+  <!-- Body -->
+  <path d="M 105,190 L 195,190 L 215,280 L 85,280 Z" fill="url(#bodyGrad)" stroke="#ffffff" stroke-width="2"/>
+  
+  <!-- Chest Screen / Heart -->
+  <rect x="118" y="210" width="64" height="42" rx="12" fill="#0f172a"/>
+  <!-- Chhattisgarh Icon / Seva Badge -->
+  <circle cx="150" cy="231" r="14" fill="#00f2fe" opacity="0.2"/>
+  <text x="150" y="236" font-family="'Noto Sans Devanagari', sans-serif" font-size="13" font-weight="900" fill="#00f2fe" text-anchor="middle">सेवा</text>
+
+  <!-- Hands / Arms -->
+  <path d="M 90,205 Q 50,225 65,255" fill="none" stroke="url(#bodyGrad)" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="65" cy="255" r="10" fill="#0072ff"/>
+  
+  <!-- Right Waving Hand -->
+  <path d="M 210,205 Q 255,215 248,185" fill="none" stroke="url(#bodyGrad)" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="248" cy="180" r="11" fill="#ffd166" stroke="#fff" stroke-width="2"/>
+</svg>

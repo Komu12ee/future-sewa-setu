@@ -1,0 +1,7 @@
+{
+  "id": "caste-certificate",
+  "enabled": false,
+  "icon": "🏛️",
+  "title": { "hi": "जाति प्रमाण पत्र", "en": "Caste Certificate" },
+  "keywords": ["जाति", "caste", "जाति प्रमाण पत्र"]
+}

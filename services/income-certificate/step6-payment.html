@@ -1,0 +1,81 @@
+<div class="seva-modal-overlay" id="paymentModalOverlay">
+  <div class="seva-payment-modal">
+    <div class="seva-modal-header">
+      <span>भुगतान</span>
+      <button type="button" class="seva-modal-close" id="btnClosePaymentModal">&times;</button>
+    </div>
+
+    <div class="seva-modal-body" id="paymentModalBody">
+      <div class="seva-payment-amount-title">कुल राशि देय</div>
+      <div class="seva-payment-amount">₹30.00</div>
+
+      <div class="seva-payment-qr">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+          <!-- Realistic SVG QR Code pattern -->
+          <rect width="160" height="160" fill="#ffffff" />
+          <!-- Top Left Finder Pattern -->
+          <rect x="10" y="10" width="40" height="40" fill="#000000" />
+          <rect x="16" y="16" width="28" height="28" fill="#ffffff" />
+          <rect x="22" y="22" width="16" height="16" fill="#000000" />
+
+          <!-- Top Right Finder Pattern -->
+          <rect x="110" y="10" width="40" height="40" fill="#000000" />
+          <rect x="116" y="16" width="28" height="28" fill="#ffffff" />
+          <rect x="122" y="22" width="16" height="16" fill="#000000" />
+
+          <!-- Bottom Left Finder Pattern -->
+          <rect x="10" y="110" width="40" height="40" fill="#000000" />
+          <rect x="16" y="116" width="28" height="28" fill="#ffffff" />
+          <rect x="22" y="122" width="16" height="16" fill="#000000" />
+
+          <!-- Data Matrix Dots -->
+          <rect x="60" y="15" width="8" height="8" fill="#000000" />
+          <rect x="75" y="20" width="12" height="6" fill="#000000" />
+          <rect x="92" y="12" width="8" height="10" fill="#000000" />
+          <rect x="60" y="32" width="14" height="6" fill="#000000" />
+          <rect x="80" y="35" width="8" height="8" fill="#000000" />
+          <rect x="20" y="60" width="8" height="12" fill="#000000" />
+          <rect x="35" y="65" width="10" height="8" fill="#000000" />
+          <rect x="55" y="55" width="12" height="12" fill="#000000" />
+          <rect x="75" y="60" width="16" height="6" fill="#000000" />
+          <rect x="100" y="55" width="10" height="10" fill="#000000" />
+          <rect x="125" y="60" width="14" height="8" fill="#000000" />
+          <rect x="60" y="80" width="8" height="16" fill="#000000" />
+          <rect x="75" y="85" width="12" height="8" fill="#000000" />
+          <rect x="95" y="80" width="14" height="10" fill="#000000" />
+          <rect x="115" y="85" width="8" height="12" fill="#000000" />
+          <rect x="130" y="80" width="12" height="8" fill="#000000" />
+          <rect x="60" y="110" width="12" height="10" fill="#000000" />
+          <rect x="80" y="115" width="8" height="8" fill="#000000" />
+          <rect x="100" y="110" width="16" height="8" fill="#000000" />
+          <rect x="125" y="115" width="10" height="12" fill="#000000" />
+          <rect x="65" y="130" width="10" height="12" fill="#000000" />
+          <rect x="85" y="135" width="14" height="6" fill="#000000" />
+          <rect x="110" y="130" width="8" height="14" fill="#000000" />
+          <rect x="125" y="135" width="16" height="8" fill="#000000" />
+        </svg>
+      </div>
+
+      <div style="font-size: 15px; font-weight: 600; color: #475569; margin-bottom: 12px;">Scan to pay</div>
+
+      <!-- Payment Icons -->
+      <div class="seva-payment-icons">
+        <span title="UPI" style="font-weight: 900; color: #0284c7; font-size: 16px; border: 1px solid #cbd5e1; padding: 2px 8px; border-radius: 4px;">UPI ❯</span>
+        <span title="Card" style="font-weight: 700; color: #1e293b; font-size: 16px; border: 1px solid #cbd5e1; padding: 2px 8px; border-radius: 4px;">💳 Card</span>
+        <span title="Net Banking" style="font-weight: 700; color: #0f766e; font-size: 16px; border: 1px solid #cbd5e1; padding: 2px 8px; border-radius: 4px;">🏛 Bank</span>
+      </div>
+
+      <button type="button" id="btnConfirmPayment" class="seva-btn seva-btn-red" style="padding: 10px 40px; font-size: 16px;">पुष्टि करें</button>
+    </div>
+
+    <!-- Payment Success State (Swapped on success) -->
+    <div class="seva-modal-body" id="paymentSuccessBody" style="display: none; padding: 36px 20px;">
+      <div style="width: 72px; height: 72px; background: #dcfce7; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h3 style="font-size: 24px; font-weight: 800; color: #166534; margin-bottom: 8px;">भुगतान सफल ✓</h3>
+      <p style="font-size: 16px; color: #475569; margin-bottom: 12px;">कुल राशि: ₹30.00</p>
+      <p style="font-size: 13px; font-family: monospace; color: #64748b;">लेन-देन आईडी: TXN-20261024-94079</p>
+    </div>
+  </div>
+</div>

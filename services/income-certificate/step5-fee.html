@@ -1,0 +1,45 @@
+<div class="seva-container">
+  <h1 class="seva-page-title">शुल्क विवरण</h1>
+
+  <table class="seva-fee-table">
+    <thead>
+      <tr>
+        <th style="width: 120px; text-align: center;">क्रमांक नं</th>
+        <th>शुल्क</th>
+        <th style="width: 200px; text-align: right;">कुल राशि</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: center;">1</td>
+        <td>स्कैनिंग शुल्क</td>
+        <td style="text-align: right; font-weight: 500;">0 /-Rs.</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;">2</td>
+        <td>लोकसेवा केंद्र/सीएससी/कीओस्क के लिए सेवा शुल्क</td>
+        <td style="text-align: right; font-weight: 500;">30 /-Rs.</td>
+      </tr>
+      <tr class="seva-fee-total-row">
+        <td colspan="2" style="font-weight: 700;">कुल</td>
+        <td style="text-align: right; font-weight: 700; font-size: 16px;">30 /-Rs.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="display: flex; justify-content: flex-end; align-items: center; gap: 16px; margin: 20px 0;">
+    <label class="seva-label" for="paymentMethod" style="font-size: 15px;">भुगतान का तरीका:</label>
+    <div class="seva-select-wrapper" style="width: 220px;">
+      <select id="paymentMethod" class="seva-select" style="font-weight: 600;">
+        <option value="eWallet" selected>eWallet</option>
+        <option value="UPI">UPI / QR Code</option>
+        <option value="NetBanking">Net Banking</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="seva-actions-bar">
+    <button type="button" id="btnFeeSubmit" class="seva-btn seva-btn-green">जमा करें</button>
+    <button type="button" id="btnFeeClose" class="seva-btn seva-btn-red">बंद</button>
+  </div>
+</div>

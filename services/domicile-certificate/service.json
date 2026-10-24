@@ -1,0 +1,7 @@
+{
+  "id": "domicile-certificate",
+  "enabled": false,
+  "icon": "🏡",
+  "title": { "hi": "निवास (मूल निवासी) प्रमाण पत्र", "en": "Domicile Certificate" },
+  "keywords": ["निवास", "मूल निवासी", "domicile"]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "default",
+  "name": "Chips (चिप्स)",
+  "type": "image",
+  "states": {
+    "idle": "./mascot-packs/default/mascot.svg",
+    "speaking": "./mascot-packs/default/mascot.svg",
+    "listening": "./mascot-packs/default/mascot.svg",
+    "thinking": "./mascot-packs/default/mascot.svg",
+    "happy": "./mascot-packs/default/mascot.svg"
+  },
+  "image": "./mascot-packs/default/mascot.svg",
+  "thumbnail": "./mascot-packs/default/mascot.svg",
+  "background": "transparent",
+  "scale": 1.0,
+  "voice": { "lang": "hi-IN", "speaker": "shreya", "pace": 1.0 }
+}

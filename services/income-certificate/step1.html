@@ -1,0 +1,131 @@
+<div class="seva-container">
+  <h1 class="seva-page-title">आय प्रमाण पत्र</h1>
+
+  <div class="seva-card-step1">
+    <div class="seva-card-step1-title">आवेदक की बुनियादी जानकारी</div>
+
+    <div class="seva-step1-grid">
+      <!-- Left Gray Panel: Applicant Details -->
+      <div class="seva-gray-panel">
+        <div class="seva-form-row">
+          <div class="seva-form-group">
+            <label class="seva-label" for="applicantName">आवेदक का नाम<span class="seva-required">*</span></label>
+            <input type="text" id="applicantName" class="seva-input" placeholder="आवेदक का नाम" required />
+          </div>
+          <div class="seva-form-group">
+            <label class="seva-label" for="beneficiaryName">हितग्राही का नाम<span class="seva-required">*</span></label>
+            <input type="text" id="beneficiaryName" class="seva-input" placeholder="हितग्राही का नाम" required />
+          </div>
+        </div>
+
+        <div class="seva-form-group">
+          <label class="seva-checkbox-label">
+            <input type="checkbox" id="sameApplicantBeneficiary" class="seva-checkbox" checked />
+            <span>क्या हितग्राही और आवेदक एक ही है</span>
+          </label>
+        </div>
+
+        <div class="seva-form-row">
+          <div class="seva-form-group">
+            <label class="seva-label" for="applicantEmail">ई मेल<span class="seva-required">*</span></label>
+            <input type="email" id="applicantEmail" class="seva-input seva-input-email-demo" value="komendra25302@iiitnr.edu.in" required />
+          </div>
+          <div class="seva-form-group">
+            <label class="seva-label" for="applicantMobile">मोबाइल नंबर<span class="seva-required">*</span></label>
+            <input type="tel" id="applicantMobile" class="seva-input" placeholder="10 अंकों का मोबाइल नंबर" maxlength="10" required />
+          </div>
+        </div>
+
+        <div class="seva-form-group">
+          <label class="seva-label" for="applicationDate">आवेदन दिनांक</label>
+          <input type="text" id="applicationDate" class="seva-input" readonly />
+        </div>
+
+        <div class="seva-form-group">
+          <label class="seva-label" for="applicantAddress">आवेदक का पता<span class="seva-required">*</span></label>
+          <textarea id="applicantAddress" class="seva-textarea" placeholder="मकान नं., ग्राम/मोहल्ला, थाना" required></textarea>
+        </div>
+      </div>
+
+      <!-- Right Blue Panel: Office Selection -->
+      <div class="seva-blue-panel">
+        <div class="seva-blue-panel-title">कार्यालय का चयन :</div>
+
+        <label class="seva-checkbox-label" style="font-size: 13px; color: #fff;">
+          <input type="checkbox" id="prevOfficeCheck" class="seva-checkbox" />
+          <span>पिछले कार्यालय का चयन (अभनपुर तहसील---उप-जिला / राजस्व तहसील / राजस्व उप-तहसील )</span>
+        </label>
+
+        <div class="seva-form-group">
+          <label class="seva-label" for="officeDistrict">जिला<span class="seva-required">*</span></label>
+          <div class="seva-select-wrapper">
+            <select id="officeDistrict" class="seva-select" required>
+              <option value="">-- जिला चुनें --</option>
+              <option value="बालोद" selected>बालोद</option>
+              <option value="रायपुर">रायपुर</option>
+              <option value="दुर्ग">दुर्ग</option>
+              <option value="बिलासपुर">बिलासपुर</option>
+              <option value="बस्तर">बस्तर</option>
+              <option value="राजनांदगांव">राजनांदगांव</option>
+              <option value="धमतरी">धमतरी</option>
+              <option value="महासमुंद">महासमुंद</option>
+              <option value="कवर्धा">कबीरधाम (कवर्धा)</option>
+              <option value="कोरबा">कोरबा</option>
+              <option value="रायगढ़">रायगढ़</option>
+              <option value="सरगुजा">सरगुजा</option>
+              <option value="कांकेर">कांकेर</option>
+              <option value="जांजगीर-चांपा">जांजगीर-चांपा</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="seva-form-group">
+          <label class="seva-label" for="officeType">कार्यालय प्रकार<span class="seva-required">*</span></label>
+          <div class="seva-select-wrapper">
+            <select id="officeType" class="seva-select" required>
+              <option value="उप-जिला / राजस्व तहसील / राजस्व उप-तहसील" selected>उप-जिला / राजस्व तहसील / राजस्व उप-तहसील</option>
+              <option value="अनुविभागीय अधिकारी (राजस्व)">अनुविभागीय अधिकारी (राजस्व)</option>
+              <option value="कलेक्टर कार्यालय">कलेक्टर कार्यालय</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="seva-form-group">
+          <label class="seva-label" for="officeTehsil">उप जिला राजस्व तालुक / तहसील<span class="seva-required">*</span></label>
+          <div class="seva-select-wrapper">
+            <select id="officeTehsil" class="seva-select" required>
+              <option value="">-- तहसील चुनें --</option>
+              <option value="अर्जुन्दा तहसील" selected>अर्जुन्दा तहसील</option>
+              <option value="बालोद तहसील">बालोद तहसील</option>
+              <option value="गुंडरदेही तहसील">गुंडरदेही तहसील</option>
+              <option value="डौंडी तहसील">डौंडी तहसील</option>
+              <option value="डौंडीलोहारा तहसील">डौंडीलोहारा तहसील</option>
+              <option value="गुरूर तहसील">गुरूर तहसील</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="seva-form-group">
+          <label class="seva-label" for="officeVillage">राजस्व गांव<span class="seva-required">*</span></label>
+          <div class="seva-select-wrapper">
+            <select id="officeVillage" class="seva-select" required>
+              <option value="">-- गांव चुनें --</option>
+              <option value="अर्जुनीटिकरी" selected>अर्जुनीटिकरी</option>
+              <option value="अर्जुन्दा">अर्जुन्दा</option>
+              <option value="सुरेगांव">सुरेगांव</option>
+              <option value="परसदा">परसदा</option>
+              <option value="देवरी">देवरी</option>
+              <option value="चीचा">चीचा</option>
+              <option value="सरेखा">सरेखा</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="seva-actions-bar">
+    <button type="button" id="btnStep1Next" class="seva-btn seva-btn-red">जमा करें</button>
+    <button type="button" id="btnStep1Reset" class="seva-btn seva-btn-red">फिर से</button>
+  </div>
+</div>
